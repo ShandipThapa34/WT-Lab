@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple calculator</title>
+</head>
+<body>
+	<style type="text/css">
+		form{
+			border: solid black;
+			padding: 5px;
+			background-color: lightblue;
+			display: inline-block;
+		}
+	</style>
+	<form>
+		<label for="num1box">Num1:</label>
+		<input type="text" id="num1box">
+		<br>
+		<label for="num2box">Num2:</label>
+		<input type="text" id="num2box">
+		<br>
+		<label for="resultbox">Result:</label>
+		<input type="text" id="resultbox">
+		<br>
+		<button type="button" id="add1" onclick="add()">Addition</button>
+		<button type="button" id="sub1" onclick="sub()">Substract</button>
+		<button type="button" id="mul1" onclick="mul()">Multiply</button>
+		<button type="button" id="div1" onclick="div()">Divide</button>
+	</form>
+
+	<script type="text/javascript">
+		function add()
+		{
+			var num1=document.getElementById("num1box").value;
+			var num2=document.getElementById("num2box").value;
+			var result=parseInt(num1)+parseInt(num2);
+			document.getElementById("resultbox").value=result;
+		}
+		function sub()
+		{
+			var num1=document.getElementById("num1box").value;
+			var num2=document.getElementById("num2box").value;
+			var result=parseInt(num1)-parseInt(num2);
+			document.getElementById("resultbox").value=result;
+		}
+		function mul()
+		{
+			var num1=document.getElementById("num1box").value;
+			var num2=document.getElementById("num2box").value;
+			var result=parseInt(num1)*parseInt(num2);
+			document.getElementById("resultbox").value=result;
+		}
+		function div()
+		{
+			var num1=document.getElementById("num1box").value;
+			var num2=document.getElementById("num2box").value;
+			var result=parseInt(num1)/parseInt(num2);
+			document.getElementById("resultbox").value=result;
+		}
+	</script>
+</body>
+</html>

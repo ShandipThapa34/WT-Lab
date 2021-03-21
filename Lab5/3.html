@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Content</title>
+	<style type="text/css">
+		pre
+		{
+			padding: 10px; 
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	
+	<pre id="text" >Write any thing down below to change this sentence:</pre>
+	<label>Enter the sentence below:</label>
+	<br/>
+	<textarea id="textarea">
+	</textarea><br/>
+	<button onclick="myfunction()">Change</button>
+	<script type="text/javascript">
+		function myfunction()
+		{
+			var i=document.getElementById("textarea").value;
+			document.getElementById("text").innerHTML=document.getElementById("textarea").value;
+		}
+	</script>
+</body>
+</html>

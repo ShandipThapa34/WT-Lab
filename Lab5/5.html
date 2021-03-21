@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign UP Page</title>
+	<style type="text/css">
+		
+		.container
+		{
+			margin: auto;
+			width: 50%;
+			background-color: lightblue;
+			padding-bottom: 7%;
+			border:solid 1px;
+			border-radius:10px; 
+
+		}
+		.div_form
+		{
+			color: black;
+			padding-left: 5%;
+			padding-bottom: 5%;
+		}
+
+		p
+		{
+			color:red;
+			font-family: serif;
+		}
+		input[type=text]
+		{
+
+			width: 75%;
+			padding-bottom: 2px;
+			padding-top: 2px;
+			
+		}
+		
+		.div_head
+		{
+			margin: auto;
+			text-align: center;
+		}
+		#result
+		{
+			color: black;
+			padding-top: 10px;
+			border-top: solid 1px;
+			border-bottom: : solid 1px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="div_head">
+			<h1><u>Sign Up Page</u></h1>
+		</div>
+		
+		<div class="div_form">
+			<form>
+			<label for="name">Name:</label>
+			<br/>
+			<input type="text" name="name" id="name_id" placeholder="Enter your name here" > <p id="p_name"></p><br/>
+			<label for="age">Age:</label>
+			<br/>
+			<input type="text" name="age" id="age_id" placeholder="Enter you age here" ><p id="p_age"></p><br/>
+			<label for="email">Email:</label>
+			<br/>
+			<input type="text" name="Email" id="email_id" placeholder="example@example.com" ><p id="p_email"></p><br/>
+			<label>Password:</label>
+			<br/>
+			<input type="Password" name="Password" id="Password_id">
+			<br/>
+			<button type="button" onclick="allFunctions()">Sign Up</button>
+		    </form>
+		</div>
+		<p id="result"></p>
+	
+	</div>
+		<script type="text/javascript">
+			var valid1,valid2,valid3;
+
+			function name()
+			{
+				var y= document.getElementById("name_id").value;
+
+				console.log(y);
+				var name_text;
+				
+				if(y=="")
+				{
+					name_text="*Invalid Input";
+					valid1=0;
+					document.getElementById("p_name").innerHTML=name_text;
+				}else{
+					valid1=1;
+					document.getElementById("p_name").innerHTML="";
+				}
+				
+			}
+
+			function age()
+			{
+				var x = document.getElementById("age_id").value;
+				console.log(x);
+				var age_text;
+				if(isNaN(x) || x<0 || x==0)
+				{
+					age_text= "*Invalid Input";
+					valid2=0;
+					document.getElementById("p_age").innerHTML=age_text;
+				}else{
+					valid2=1;
+					document.getElementById("p_age").innerHTML="";
+				}
+			
+			}
+
+			function email()
+			{
+				var z = document.getElementById("email_id").value;
+				console.log(z);
+				var email_text;
+				if(z=="")
+				{
+					address_text= "*Invalid Input";
+					valid3=0;
+					document.getElementById("p_email").innerHTML=email_text;
+
+				}else{
+					valid3=1;
+					document.getElementById("p_email").innerHTML="";
+				}
+			
+			}
+			function allFunctions()
+			{
+				age();
+				name();
+				email();
+				if(valid1==1 && valid2==1 && valid3==1)
+				{
+					document.getElementById("result").innerHTML="You can Sign In now.";
+				}else{
+					document.getElementById("result").innerHTML="Sign Up unsuccessful."
+				}
+
+			}
+		</script>
+		
+</body>
+</html>

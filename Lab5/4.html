@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drag And Drop</title>
+	<style type="text/css">
+		span
+		{
+			position: absolute;
+			top: 100px;
+			left: 50px;
+			background-color: lightblue;
+			padding: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<span onmousedown="grabber(event);">Move me</span>
+
+	<script type="text/javascript">
+		var element;
+		function grabber(evt)
+		{
+			element=event.currentTarget;
+			
+			document.addEventListener("mousemove",mover,true);
+			document.addEventListener("mouseup",dropper,true);
+		}
+
+		function mover(event)
+		{
+			element.style.left=event.clientX+"px";
+			element.style.up=event.clientY+"py";
+			
+		}
+
+		function dropper(event)
+		{
+			document.removeEventListener("mousetop",dropper,true);
+			document.removeEventListener("mousemove",mover,true);
+		}
+	</script>
+
+</body>
+</html>

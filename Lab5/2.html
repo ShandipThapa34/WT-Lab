@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stacking</title>
+	<style type="text/css">
+		body
+		{
+			background-color: black;
+		}
+		#Aura
+		{
+			border: solid white;
+			position: absolute;
+			top: 70px;
+			left: 20px;
+			width: 40%;
+			height:80%;
+		}
+		#Sunset
+		{	
+			border: solid white;
+			position: absolute;
+			top: 30px;
+			left: 70px;
+			width: 40%;
+			height:80%;
+		}
+		#Bike
+		{	
+			border: solid white;
+			position: absolute;
+			top: 0px;
+			left: 100px;
+			width: 40%;
+			height:80%;
+		}
+	</style>
+</head>
+<body>
+	<img src="aura.jpg" alt="Aura" id="Aura" onclick="bringFront(id)">
+	<img src="sunset.jpg" alt="Sunset" id="Sunset" onclick="bringFront(id)">
+	<img src="Bike.jpg" alt="Bike" id="Bike" onclick="bringFront(id)">
+	<script type="text/javascript">
+		function bringFront(id)
+		{
+			if(id=="Aura")
+		  {
+			document.getElementById("Aura").style.zIndex=2;
+			document.getElementById("Sunset").style.zIndex=1;
+			document.getElementById("Bike").style.zIndex=0;
+		  }
+		   else if(id=="Sunset")
+		  {
+			document.getElementById("Aura").style.zIndex=0;
+			document.getElementById("Sunset").style.zIndex=2;
+			document.getElementById("Bike").style.zIndex=1;
+		  }
+		  else
+		  {
+		  	document.getElementById("Aura").style.zIndex=1;
+		  	document.getElementById("Sunset").style.zIndex=0;
+		  	document.getElementById("Bike").style.zIndex=2;
+		  }
+		}
+		
+	</script>
+</body>
+</html>

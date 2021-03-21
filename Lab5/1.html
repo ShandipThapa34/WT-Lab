@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visibility</title>
+</head>
+<body>
+	<img src="Bridge.png" alt="Bridge" id="Image" width="50%" height="50%">
+	<br/>
+	<button onclick="hideImage()">Hide</button>
+	<button onclick="showImage()">Show</button>
+
+	<script type="text/javascript">
+		function showImage()
+		{
+			document.getElementById("Image").style.visibility="visible";
+		}
+
+		
+		function hideImage()
+		{
+			document.getElementById("Image").style.visibility="hidden";
+		}
+	</script>
+</body>
+</html>

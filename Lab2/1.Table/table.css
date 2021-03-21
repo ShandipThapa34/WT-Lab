@@ -1,0 +1,16 @@
+table,th,td{
+	background-color:#3333;
+	text-align: center;
+	border-collapse: collapse;
+	padding:4px;
+	border: 2px solid black;
+}
+td{
+	background-color: #0000;
+}
+ul{
+	color: tomato;
+}
+ol{
+	color: blue;
+}

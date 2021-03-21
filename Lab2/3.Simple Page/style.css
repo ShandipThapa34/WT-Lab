@@ -1,0 +1,104 @@
+body{
+	background-color: #f1f1f1;
+	margin: 0px}
+header,header p{
+	background-color: orange;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	font-family: arial;
+}
+
+nav{
+	overflow: hidden;
+	background-color: #333;
+}
+nav a{
+	float: left;
+	background-color: #ffffff;
+	padding: 12px 10px;
+	text-decoration: none;
+}
+nav a:hover{
+	background-color: black;
+	color: orange;
+}
+
+.column{
+	float: left;
+	padding: 10px;
+}
+.column.side{
+	width: 20%;
+}
+.column.middle{
+	width: 50%;
+}
+footer,footer p{
+	clear: both;
+	background-color: orange;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-family: arial;
+}
+div.gallery{
+	margin: 5px;
+	border: 4px solid black;
+	float: left;
+	width: 200px;
+}
+div.gallery img{
+	width: 100%;
+	height: auto;
+}
+div.gallery:hover{
+	border: 4px solid orange;
+}
+div.desc{
+	padding: 5px;
+	text-align: center;
+}
+
+input[type=text], input[type=email], select, textarea{
+	padding: 10px;
+	width: 100%;
+	border: 2px solid #ccc;
+	margin-top: 4px;
+	margin-bottom: 10px;
+	resize: vertical;
+}
+input[type=submit]{
+	padding: 10px;
+	background-color: orange;
+	color: white;
+	border: none;
+	margin: 4px;
+}
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+td,th{
+	text-align: left;
+	padding: 12px;
+	border: 2px solid black;
+}
+tr:nth-child(odd){
+	background-color: white;
+}
+th{
+	background-color: orange;
+	color: white;
+}
+@media screen and (max-width: 617px){
+	.column.side,.column.middle{
+		width: 100%;
+	}
+/*this is paragraph line*/
+p{
+	text-align: justify;
+}
+
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+	
+	<form name="myForm" action="show.php" onsubmit="return validateForm()" method="post" target="_blank">
+		<div class="form">
+			<h2>Personal Information</h2>
+			<div class="content">
+				<label for="fname">First Name :</label>
+				<input type="text" id="fname" name="fname" required><br/>
+				<label for="lname">Last Name :</label>		
+				<input type="text" id="lname" name="lname" required><br/>
+				<label for="DOB">Date Of Birth :</label>
+				<input type="date" name="date" id="DOB" value="dd-mm-yy" 
+				name="DOB" required><br/>
+				<label for="gender">Gender :</label>
+				<select name="gender" id="gender">
+					<option value="" selected="disabled">Select Gender</option>
+					<option value="male" >Male</option>
+					<option value="female" >Female</option>
+					<option value="others" >Others</option>
+				</select>
+		    </div>
+		    <h2>Account Information</h2>
+		    <div class="content">
+		    	<label for="email">Email :</label>
+		    	<input type="email" name="email" id="email" required><br/>
+		    	<label for="reEmail">Re-type Email :</label>
+		    	<input type="email" name="reEmail" id="reEmail" required><br/>
+		    	<label for="password">Password :</label>
+		    	<input type="password" name="password" id="password" required minlength="8" ><br/>
+		    	<label for="re-password">Re-type Password :</label>
+		    	<input type="password" name="rePassword" id="rePassword" required><br/>
+		    	<label for="question">Security Question :</label>
+		    	<select id="question" name="question">
+		    		<option value="" selected="disabled">Select Security Question
+		    		</option>
+		    		<option value="Grand Father Name">
+		    			Grand Father Name
+		    		</option>
+		    		<option value="High-School Name">
+		    			High-School Name
+		    		</option>
+		    	</select><br/>
+		    	<label for="answer">Security Answer :</label>
+		    	<input type="text" name="answer" id="answer"><br/>
+		    </div>
+		    <h2>Contact Information</h2>
+		    <div class="content">
+		    	<label for="address">Address :</label>
+		    	<input type="text" name="address" id="address" required><br/>
+		    	<label for="city">City :</label>
+		    	<input type="text" name="city" id="city" required><br/>
+		    	<label for="state">State</label>
+		    	<select name="state" id="state">
+		    		<option value="" selected="disabled">
+		    			Select State
+		    		</option>
+		    		<option value="state 1">
+		    			State 1
+		    		</option>
+		    		<option value="state 2">
+		    			State 2
+		    		</option>
+		    		<option value="state 3">
+		    			State 3
+		    		</option>
+		    		<option value="state 4">
+		    			State 4
+		    		</option>
+		    		<option value="state 5">
+		    			State 5
+		    		</option>
+		    	</select>
+		    	
+		    	<br/>
+
+		    	<label for="zip_code">Zip-Code :</label>
+		    	<input type="number" name="zip_code" id="zip_code">
+		    	<button disabled>Optional</button><br/>
+		    	<label for="phone">Phone :</label>
+		    	<input type="number" name="phone" id="phone" required>
+		    	<select id="select_phone" name="select_phone">
+		    		<option value="Mobile">
+		    			Mobile
+		    		</option>
+		    		<option value="Telephone">
+		    			Telephone
+		    		</option>
+		    	</select>
+		    </div>
+		    <input type="submit" name="submit" value="Submit">
+		    <br/>
+		</div>
+	</form>
+	<script type = "text/javascript">
+		var x = document.forms["myForm"] ;
+
+		function validatePassword(){
+			var password_value = x["password"].value;
+			var re_type_password_value = x["rePassword"].value;
+			if(password_value == re_type_password_value){
+				return true;
+			}
+			else{
+				alert("Password didn't matched.");
+				return false;
+			}
+		}
+		function validateEmail(){
+			var email_value = x["email"].value;
+			var re_email_value = x["reEmail"].value;
+			if(email_value != re_email_value){
+				alert("Email didn't matched.");
+				return false;
+			}
+		}
+		function validateForm()
+		{
+			validateEmail();
+			validatePassword();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+mysql> SELECT * FROM students;
++----+--------+-----------+--------------+-----------------+---------+
+| id | name   | address   | phone_number | bio             | user_id |
++----+--------+-----------+--------------+-----------------+---------+
+|  1 | RONAK  | KATHMANDU |     98273789 | I like music    |      25 |
+|  2 | Susan  | LALITPUR  |     98192863 | I like Reading  |      26 |
+|  3 | ASHISH | CHITWAN   |     98485834 | I like Sports   |      30 |
+|  4 | MANAN  | BAGAR     |       987532 | I LIKE SWIMMING |      35 |
+|  5 | SAJAN  | HEMJA     |       987654 | I LIKE GAMING   |      40 |
++----+--------+-----------+--------------+-----------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM students WHERE id=1;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> DELETE FROM students WHERE id=2;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM students;
++----+--------+---------+--------------+-----------------+---------+
+| id | name   | address | phone_number | bio             | user_id |
++----+--------+---------+--------------+-----------------+---------+
+|  3 | ASHISH | CHITWAN |     98485834 | I like Sports   |      30 |
+|  4 | MANAN  | BAGAR   |       987532 | I LIKE SWIMMING |      35 |
+|  5 | SAJAN  | HEMJA   |       987654 | I LIKE GAMING   |      40 |
++----+--------+---------+--------------+-----------------+---------+
+3 rows in set (0.00 sec)

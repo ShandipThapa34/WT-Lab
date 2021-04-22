@@ -1,0 +1,29 @@
+mysql> USE GCES;
+Database changed
+mysql> CREATE TABLE student(
+    -> id int PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    -> name varchar(30) NOT NULL,
+    -> address varchar(30) NOT NULL,
+    -> phone_number int NOT NULL,
+    -> bio text
+    -> );
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> CREATE TABLE users(
+    -> id int PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    -> user_name varchar(30) NOT NULL UNIQUE,
+    -> password text NOT NULL,
+    -> email varchar(30) NOT NULL UNIQUE
+    -> );
+Query OK, 0 rows affected (0.36 sec)
+
+mysql> CREATE TABLE addresses(
+    -> id int PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    -> user_id int NOT NULL UNIQUE,
+    -> country varchar(30) NOT NULL,
+    -> state varchar(30) ,
+    -> district varchar(30),
+    -> address_1 varchar(30),
+    -> address_2 varchar(30)
+    -> );
+Query OK, 0 rows affected (0.37 sec)

@@ -1,0 +1,30 @@
+mysql> RENAME TABLE student TO students;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_gces |
++----------------+
+| addresses      |
+| students       |
+| users          |
++----------------+
+3 rows in set (0.00 sec)
+
+mysql> ALTER TABLE students
+    -> ADD user_id int UNIQUE;
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE students;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| id           | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name         | varchar(30) | NO   |     | NULL    |                |
+| address      | varchar(30) | NO   |     | NULL    |                |
+| phone_number | int(11)     | NO   |     | NULL    |                |
+| bio          | text        | YES  |     | NULL    |                |
+| user_id      | int(11)     | YES  | UNI | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
